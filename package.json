@@ -15,7 +15,10 @@
     "build": "rimraf -fr dist/* && tsc -p tsconfig.json && tsc -p tsconfig-cjs.json && node ts-postcompiler.js -esm tsconfig.json -cjs tsconfig-cjs.json",
     "postinstall": "npm run build"
   },
-
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dev-WRS/lts-server-v2.git"
+  },
   "author": "",
   "license": "ISC",
   "homepage": "",
