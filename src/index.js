@@ -20,6 +20,10 @@ const { errorHandler, ...HttpErrorsClasses } = errorHandlerModule
 
 const createApp = async () => {
 	const cwd = process.cwd()
+	//added lines by oto
+	if (cwd.includes('\\src')) {
+	   cwd = cwd.replace('\\src', '')
+	}
 	const configDir = path.join(cwd, 'src', 'config')
 	const dbDir = path.join(cwd, 'src', 'db')
 	const servicesDir = path.join(cwd, 'src', 'services')
